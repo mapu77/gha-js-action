@@ -9,7 +9,7 @@ function commentIssue(joke) {
     const owner = core.getInput("owner", { required: true });
     const issue_number = core.getInput("issue_number", { required: true });
 
-    return octokit.rest.issues.createComment({
+    return octokit.request('POST /repos/{owner}/{repo}/issues/{issue_number}/comments', {
         owner: owner,
         repo: repo,
         issue_number: issue_number,
