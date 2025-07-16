@@ -13,3 +13,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Ha-Ha
         uses: ./.github/actions/joke-action
+        with:
+          owner: '${{ github.repository_owner }}'
+          repository: '${{ github.event.repository.name }}'
+          issue_number: '${{ github.event.issue.number }}'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
