@@ -6,7 +6,7 @@ const config = {
     input: "src/main.js",
     output: {
         esModule: true,
-        file: "dist/main.js",
+        file: ".github/actions/joke-action/dist/main.js",
         format: "es",
         sourcemap: true,
     },
