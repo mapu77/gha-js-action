@@ -20,5 +20,5 @@ outputs:
     description: The resulting joke from the icanhazdadjokes API
 
 runs:
-  using: "node16"
-  main: "main.js"
+  using: "node20"
+  main: "dist/main.js"
