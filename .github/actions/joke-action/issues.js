@@ -5,7 +5,7 @@ const token = core.getInput("GITHUB_TOKEN", { required: true });
 const octokit = new github.getOctokit(token);
 
 function commentIssue(joke) {
-    const repo = core.getInput("repo", { required: true });
+    const repo = core.getInput("repository", { required: true });
     const owner = core.getInput("owner", { required: true });
     const issue_number = core.getInput("issue_number", { required: true });
 
