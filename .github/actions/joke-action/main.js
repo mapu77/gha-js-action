@@ -8,7 +8,7 @@ async function run() {
     core.setOutput("joke-output", joke);
 
     return commentIssue(joke).then((response) => {
-        core.info(`Issue comment: ${response.body.html_url}`);
+        core.info(`Issue comment: ${response.data.html_url}`);
     }).catch((error) => {
         core.setFailed(`Error commenting on PR: ${error.message}`);
     })
